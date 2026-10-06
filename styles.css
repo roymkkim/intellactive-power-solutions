@@ -136,11 +136,28 @@ h2 {
 }
 
 .section-lede {
-  margin: 0.85rem auto 4.5rem;
-  max-width: 36rem;
+  margin: 0.85rem auto 0;
+  max-width: 38rem;
   font-size: 1.05rem;
   font-weight: 400;
   color: var(--muted);
+}
+
+.narrative {
+  max-width: 38rem;
+  margin: 1.25rem auto 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.section-lede + .steps,
+.narrative + .steps {
+  margin-top: 3.5rem;
+}
+
+.steps + .narrative,
+.market {
+  margin-top: 3.5rem;
 }
 
 .row,
