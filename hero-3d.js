@@ -501,16 +501,18 @@
     if (!mount) return false;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
+    // A transparent canvas can bleed past its box without covering the page.
+    const clear = !!options.transparent;
+    scene.background = clear ? null : new THREE.Color(0x000000);
 
     // A narrow lens reads as flat head-on; depth shows when dragged.
     const camera = new THREE.PerspectiveCamera(options.fov || 32, 1, 0.1, 400);
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: false,
+      alpha: clear,
       preserveDrawingBuffer: true,
     });
-    renderer.setClearColor(0x000000, 1);
+    renderer.setClearColor(0x000000, clear ? 0 : 1);
     renderer.domElement.setAttribute("aria-hidden", "true");
     renderer.domElement.style.touchAction = "none";
     renderer.domElement.style.cursor = "grab";
@@ -726,6 +728,11 @@
       const h = Math.max(1, Math.round(rect.height * bleed));
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.setSize(w, h, true);
+      if (bleed !== 1) {
+        // Oversized canvas, centered on the box, so rotated corners stay visible.
+        renderer.domElement.style.width = `${bleed * 100}%`;
+        renderer.domElement.style.height = `${bleed * 100}%`;
+      }
       camera.aspect = w / h;
       fitCamera();
       if (window.__heroDebug && window.__heroDebug.length) {
@@ -827,9 +834,11 @@
         hidden: HIDDEN_LOGO,
         buildCells: buildLogoCells,
         fit: "sphere",
-        fitPad: 0.9,
+        // fitPad scales with canvasBleed so the flat view keeps its size.
+        fitPad: 1.26,
         objectScale: 1.214,
-        canvasBleed: 1,
+        canvasBleed: 1.4,
+        transparent: true,
         fov: 2.5,
         ampAt: logoCellAmp,
         phaseClock: true,

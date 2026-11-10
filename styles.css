@@ -1998,6 +1998,22 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
   }
 }
 
+/* Let the 3D logo's canvas bleed past its box; text stays on top. */
+.hero-inner .cell-mark,
+.hero-inner .hero-logo-cubes,
+.hero-inner .hero-logo-cubes .cell-hull {
+  overflow: visible;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-inner .cell-mark {
+  z-index: 1;
+}
+
 /* Footer */
 .site-footer {
   align-items: center;
