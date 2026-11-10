@@ -866,7 +866,7 @@ main {
   width: 1rem;
   height: 1rem;
   border: 1px solid #5a5a5a;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bg);
 }
 
