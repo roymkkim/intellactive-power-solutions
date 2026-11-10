@@ -827,7 +827,7 @@
         hidden: HIDDEN_LOGO,
         buildCells: buildLogoCells,
         fit: "sphere",
-        fitPad: 1.22,
+        fitPad: 0.9,
         objectScale: 1.214,
         canvasBleed: 1,
         fov: 2.5,
