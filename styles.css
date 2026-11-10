@@ -1959,9 +1959,10 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
 }
 
 .stat-arrow {
-  margin: 0 0.18em;
+  margin: 0 0.16em;
+  font-family: "Inter", var(--display);
+  font-weight: 300;
   color: var(--muted);
-  font-weight: 400;
 }
 
 .fig-row p.stat-source {
