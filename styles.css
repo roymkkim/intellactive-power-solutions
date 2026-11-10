@@ -723,10 +723,6 @@ main {
   padding-top: 9rem;
 }
 
-.fig-intro {
-  max-width: 42rem;
-  margin: -1.5rem 0 3.5rem;
-}
 
 #market-size > .steps:first-child,
 #market-size > .fig-row:first-of-type {
@@ -2061,10 +2057,6 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
   #market-size,
   #claims {
     padding-top: 4.5rem;
-  }
-
-  .fig-intro {
-    margin: -0.75rem 0 2.25rem;
   }
 
   .site-footer {
