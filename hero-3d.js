@@ -518,11 +518,11 @@
     const group = new THREE.Group();
     if (options.objectScale) group.scale.setScalar(options.objectScale);
     scene.add(group);
-    scene.add(new THREE.AmbientLight(0xffffff, 0.55));
-    const key = new THREE.DirectionalLight(0xffffff, 0.88);
+    scene.add(new THREE.AmbientLight(0xffffff, 1.15));
+    const key = new THREE.DirectionalLight(0xffffff, 1.75);
     key.position.set(5, 7, 10);
     scene.add(key);
-    const rim = new THREE.DirectionalLight(0xffffff, 0.28);
+    const rim = new THREE.DirectionalLight(0xffffff, 0.5);
     rim.position.set(-6, -2, 5);
     scene.add(rim);
 
