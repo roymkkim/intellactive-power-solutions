@@ -152,6 +152,27 @@ body {
   border-color: #555;
 }
 
+/* Primary action carries the weight; the secondary steps back. */
+.btn-primary {
+  font-weight: 600;
+}
+
+.hero-actions .btn {
+  padding: 1rem 1.6rem;
+  font-size: 1.05rem;
+}
+
+.hero-actions .btn-ghost {
+  font-weight: 500;
+  color: #cfcfcf;
+  border-color: #2e2e2e;
+}
+
+.hero-actions .btn-ghost:hover {
+  color: var(--ink);
+  border-color: #555;
+}
+
 .hero-inner .cell-mark {
   justify-self: end;
   width: 100%;
