@@ -1313,22 +1313,6 @@ footer p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .fig-row-4 li {
-    padding: 0 1.5rem 0 0;
-    border-left: 0;
-  }
-
-  .fig-row-4 li:nth-child(even) {
-    padding-left: 1.5rem;
-    padding-right: 0;
-    border-left: 1px solid var(--line);
-  }
-
-  .fig-row-4 li:nth-child(n + 3) {
-    margin-top: 1.75rem;
-    padding-top: 1.75rem;
-    border-top: 1px solid var(--line);
-  }
 
   .roadmap li,
   .roadmap li:nth-child(even),
@@ -1339,6 +1323,31 @@ footer p {
 
   .roadmap li:nth-child(n + 3) {
     margin-top: 3rem;
+  }
+}
+
+/* Four-up rows in two columns: one continuous cross of dividers. */
+@media (min-width: 861px) and (max-width: 1100px) {
+  .fig-row-4:not(.roadmap) > li,
+  .fig-row-4:not(.roadmap) > li + li {
+    margin: 0;
+    padding: 0 2.5rem 0 0;
+    border: 0;
+  }
+
+  .fig-row-4:not(.roadmap) > li:nth-child(even) {
+    padding-left: 2.5rem;
+    padding-right: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .fig-row-4:not(.roadmap) > li:nth-child(-n + 2) {
+    padding-bottom: 2.75rem;
+  }
+
+  .fig-row-4:not(.roadmap) > li:nth-child(n + 3) {
+    padding-top: 2.75rem;
+    border-top: 1px solid var(--line);
   }
 }
 
