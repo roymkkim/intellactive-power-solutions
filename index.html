@@ -2,115 +2,231 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
   <title>IntellActive Power Solutions — The brain inside battery storage</title>
-  <meta name="description" content="IntellActive builds the battery management system — the electronic brain — inside battery storage. Cell-level safety, longer life, and plug-and-play integration for AI backup and the grid." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Cell-level BMS for a $44B BESS market still running 10-year-old pack monitors. Isolate before thermal runaway, at ≤$25 a cell versus $50 mission-critical." />
+  <link rel="icon" href="assets/favicon.svg?v=mark-1" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=pitch-47" />
 </head>
-<body>
+<!-- remove grid-anim-off to restore -->
+<body class="grid-anim-off">
   <header class="wordmark">
-    <img src="assets/logo.png" alt="IntellActive Power Solutions" width="40" height="40" />
+    <img src="assets/intellactive-logo.svg" alt="IntellActive Power Solutions" width="40" height="40" />
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">IntellActive</p>
-      <h1>The electronic brain<br /><span class="h1-lock">inside battery storage.</span></h1>
-      <p class="lede">
-        Every battery storage system has an electronic brain — a battery
-        management system, or BMS. That is what we build. Our customers build
-        the storage systems around it.
-      </p>
+      <figure class="cell-mark" aria-hidden="true">
+        <div class="hero-logo-cubes" data-hero-variant="logo">
+          <div class="cell-hull" data-hero-logo></div>
+        </div>
+        <div class="hero-brain-cubes" data-hero-variant="brain">
+          <div class="cell-hull" data-hero-cylinder></div>
+        </div>
+      </figure>
     </section>
 
-    <section class="block">
-      <p class="eyebrow">Introduction</p>
-      <h2>We built the last standard.<br />Then we left it.</h2>
+    <section class="pitch">
+      <article class="block pitch-block" id="one-sentence">
+        <p class="eyebrow">Intellactive Power Solutions</p>
+        <h2>A complete BMS<br />on every cell.</h2>
+        <p class="section-lede">
+          A BMS on every battery cell. Packs can stop a fire before it starts, last
+          longer, take a new battery without a redesign, and reject forged commands —
+          at less than half the cost of today’s mission-critical BMS.
+        </p>
+        <p class="narrative">
+          Nearly every system still uses a centralized pack or module BMS — the
+          stack-monitor architecture the founders introduced more than 10 years ago.
+        </p>
+      </article>
+
+      <article class="block pitch-block fig-block" id="solution">
+        <p class="eyebrow">Four challenges</p>
+        <h2 class="fig-kicker">Ten years later, four gaps remain. <span>Pack- and module-level systems still leave these open. What we will prove with SwRI and NuEnergy.</span></h2>
+        <ol class="fig-row fig-row-4">
+          <li>
+            <div class="dotmark mark-prevent" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <h3>Thermal runaway</h3>
+            <p>
+              Today’s BMS cannot see a fire coming, and it cannot stop one.
+              GM $2.0B. Moss Landing ~$730M.
+            </p>
+            <p>
+              Isolate before onset. One cell fails. The pack stays up.
+            </p>
+          </li>
+          <li>
+            <div class="dotmark mark-life" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <h3>Battery life</h3>
+            <p>
+              Today’s BMS cannot tell when cells are wearing out.
+            </p>
+            <p>
+              Up to 40% more capacity retained. About 20% less maintenance.
+              Half the BMS cost.
+            </p>
+          </li>
+          <li>
+            <div class="dotmark mark-play" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <h3>Integration</h3>
+            <p>
+              Today’s systems are custom. Every new cell is a redesign.
+            </p>
+            <p>
+              Conventional BMS takes about 60% longer to install.
+            </p>
+          </li>
+          <li>
+            <div class="dotmark mark-defend" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <h3>Cybersecurity</h3>
+            <p>
+              Today’s BMS cannot prove which cell sent a reading, or refuse a
+              bad command.
+            </p>
+            <p>
+              Forged commands are rejected at the cell.
+            </p>
+          </li>
+        </ol>
+      </article>
+
+      <article class="block pitch-block fig-block" id="target">
+        <p class="eyebrow">Target market</p>
+        <h2 class="fig-kicker">Reliability is the entry point. <span>Start with U.S. telecom and edge backup OEMs, then expand into AI, medical, defense, and high-volume applications.</span></h2>
+        <ol class="fig-row fig-row-4">
+          <li>
+            <!-- Iconoir "antenna-signal" — MIT -->
+            <svg class="market-fig" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M17.5 8C17.5 8 19 9.5 19 12C19 14.5 17.5 16 17.5 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5 5C20.5 5 23 7.5 23 12C23 16.5 20.5 19 20.5 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 8C6.5 8 5 9.5 5 12C5 14.5 6.5 16 6.5 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.5 5C3.5 5 1 7.5 1 12C1 16.5 3.5 19 3.5 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <h3>Telecom &amp; edge</h3>
+            <p>48&nbsp;V, 3–15&nbsp;kWh. First design win.</p>
+          </li>
+          <li>
+            <!-- Iconoir "brain" — MIT -->
+            <svg class="market-fig" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7 14C5.34315 14 4 15.3431 4 17C4 18.6569 5.34315 20 7 20C7.35064 20 7.68722 19.9398 8 19.8293" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.26392 15.6046C2.9243 14.9582 2.00004 13.587 2.00004 12C2.00004 10.7883 2.53877 9.70251 3.38978 8.96898" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.42053 8.8882C3.1549 8.49109 3 8.01363 3 7.5C3 6.11929 4.11929 5 5.5 5C6.06291 5 6.58237 5.18604 7.00024 5.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.23769 5.56533C7.08524 5.24215 7 4.88103 7 4.5C7 3.11929 8.11929 2 9.5 2C10.8807 2 12 3.11929 12 4.5V20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 20C8 21.1046 8.89543 22 10 22C11.1046 22 12 21.1046 12 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 7C12 8.65685 13.3431 10 15 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 14C18.6569 14 20 15.3431 20 17C20 18.6569 18.6569 20 17 20C16.6494 20 16.3128 19.9398 16 19.8293" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.7361 15.6046C21.0757 14.9582 22 13.587 22 12C22 10.7883 21.4612 9.70251 20.6102 8.96898" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5795 8.8882C20.8451 8.49109 21 8.01363 21 7.5C21 6.11929 19.8807 5 18.5 5C17.9371 5 17.4176 5.18604 16.9998 5.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 4.5C12 3.11929 13.1193 2 14.5 2C15.8807 2 17 3.11929 17 4.5C17 4.88103 16.9148 5.24215 16.7623 5.56533" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 20C16 21.1046 15.1046 22 14 22C12.8954 22 12 21.1046 12 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <h3>AI &amp; medical</h3>
+            <p>AI rack, medical, and edge-grid backup next.</p>
+          </li>
+          <li>
+            <!-- Iconoir "shield" — MIT -->
+            <svg class="market-fig" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M5 18L3.13036 4.91253C3.05646 4.39524 3.39389 3.91247 3.90398 3.79912L11.5661 2.09641C11.8519 2.03291 12.1481 2.03291 12.4339 2.09641L20.096 3.79912C20.6061 3.91247 20.9435 4.39524 20.8696 4.91252L19 18C18.9293 18.495 18.5 21.5 12 21.5C5.5 21.5 5.07071 18.495 5 18Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <h3>C&amp;I &amp; defense</h3>
+            <p>Larger systems, UPS, second life, and defense.</p>
+          </li>
+          <li>
+            <!-- Iconoir "electronics-chip" — MIT -->
+            <svg class="market-fig" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7 19.4V4.6C7 4.26863 7.26863 4 7.6 4H16.4C16.7314 4 17 4.26863 17 4.6V19.4C17 19.7314 16.7314 20 16.4 20H7.6C7.26863 20 7 19.7314 7 19.4Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 20V22.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 20V22.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 4V1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 4V1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 12H4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.5 12H17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 6.5H4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.5 6.5H17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 17.5H4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.5 17.5H17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <h3>High volume</h3>
+            <p>A chip version for high-volume programs.</p>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <div class="story-freeze" data-story-freeze></div>
+    <div class="market-story" data-grid-story>
+      <div class="pin-scope">
+        <div class="sticky-scope" data-sticky-scope>
+          <section class="opportunity" id="opportunity">
+          <div class="block opportunity-copy story-heading pitch-block">
+            <p class="eyebrow">Why now</p>
+            <h2>Data-center load:<br />192 TWh to 649 TWh.</h2>
+            <p class="section-lede">
+              Berkeley Lab, 2024 to 2030. Every AI, telecom, and edge site needs
+              backup that cannot fail.
+            </p>
+          </div>
+
+          <div class="story-sticky">
+            <div class="grid-sticky" aria-hidden="true">
+              <div class="grid-veil"></div>
+              <div class="stat-grid"></div>
+            </div>
+            <div class="pin-spacer" data-pin-spacer aria-hidden="true"></div>
+          </div>
+
+          <div class="grid-runway" aria-hidden="true"></div>
+          <div class="after-grid-slot">
+            <div class="after-grid"></div>
+          </div>
+          <div class="lock-hold" aria-hidden="true"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section class="pitch">
+      <article class="block pitch-block fig-block" id="market-size">
+        <p class="eyebrow">Market</p>
+        <h2 class="fig-kicker">The market is already this size. <span>Storage, BMS, and the cells in those systems.</span></h2>
+        <ol class="fig-row fig-row-3">
+          <li>
+            <h3>$44B → $110B</h3>
+            <p>Storage, 2026–2031. InfoLink.</p>
+          </li>
+          <li>
+            <h3>$10B → $22B</h3>
+            <p>The BMS market. Mordor.</p>
+          </li>
+          <li>
+            <h3>662M → 1.65B cells</h3>
+            <p>Cells in those systems. BloombergNEF.</p>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="block intro cta">
+      <h2>We built the standard.<br />Now we’re building what’s next.</h2>
       <p class="section-lede">
-        The story starts at Linear Technology, now Analog Devices — the market
-        leader in battery management. Our team helped launch the first
-        standardized battery chip for electric vehicles and energy storage, and
-        led the industry’s first cell-by-cell balancing chip. That technology
-        became the standard. Standards age.
+        Our team built the first standard BMS chip at Linear Technology, now Analog Devices.
+      </p>
+      <p class="narrative intro-invite">
+        Now we are building the next one. Cell-level BMS for backup that cannot miss.
       </p>
       <p class="narrative">
-        We founded IntellActive in San Antonio to build what comes next.
-        Robert Milliken, co-founder and CTO, completed DOE Phase I as
-        principal investigator and is leading Phase II.
+        Co-founder and CTO Robert Milliken. DOE Phase I complete. Phase II underway.
       </p>
-    </section>
-
-    <section class="block">
-      <p class="eyebrow">The opportunity</p>
-      <h2>Ninety-eight percent still<br />run a ten-year-old BMS.</h2>
-      <p class="section-lede">
-        Most battery storage systems use the same standard BMS. It has three
-        gaps.
+      <p class="intro-actions">
+        <a class="btn btn-primary" href="mailto:hello@intellactive.com">Request a brief</a>
       </p>
-
-      <ol class="steps">
-        <li>
-          <span class="num">01</span>
-          <h3>Safety</h3>
-          <p>
-            Today’s BMS cannot see a battery fire coming, and it cannot stop
-            one. Ours detects the early warning signs in a single cell and
-            isolates that cell before a fire starts.
-          </p>
-        </li>
-        <li>
-          <span class="num">02</span>
-          <h3>Lifetime</h3>
-          <p>
-            Today’s BMS cannot tell when batteries are wearing out. Ours tracks
-            the health of every cell, so operators fix problems before they
-            happen and get more years from every battery.
-          </p>
-        </li>
-        <li>
-          <span class="num">03</span>
-          <h3>Integration</h3>
-          <p>
-            Today’s systems are custom-built, so every change means a redesign.
-            Ours is plug-and-play. It lives on each cell, sets itself up, and
-            works with any battery type.
-          </p>
-        </li>
-      </ol>
-
-      <p class="narrative market">
-        This matters most where failure is not an option: backup power for AI
-        data centers, medical, and the grid. That is a $500 million starting
-        market, growing more than thirty-three percent a year.
-      </p>
-    </section>
-
-    <section class="block">
-      <p class="eyebrow">Business model</p>
-      <h2>We sell the BMS.<br />Manufacturers build the rest.</h2>
-      <p class="section-lede">
-        We design the hardware and software. A contract manufacturer builds the
-        boards. We load and test the software in our own facility, then sell
-        the BMS to battery storage manufacturers.
-      </p>
-      <p class="narrative">
-        Every manufacturer uses the same standard BMS, so they are stuck
-        competing on price. We give them what their competitors do not have:
-        better safety, longer life, and faster integration — at less than half
-        the all-in cost of a standard BMS for mission-critical use.
-      </p>
-    </section>
-
-    <section id="briefing" class="cta">
-      <h2>Talk with the team.</h2>
-      <p>
-        A working session on cell-level BMS for AI backup, medical, and grid
-        storage.
-      </p>
-      <a class="btn btn-primary" href="mailto:hello@intellactive.com">Request a briefing</a>
     </section>
   </main>
 
@@ -119,6 +235,8 @@
     <p>San Antonio, Texas</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://unpkg.com/three@0.160.1/build/three.min.js"></script>
+  <script src="hero-3d.js?v=logo-scale-10"></script>
+  <script src="script.js?v=grid-measure-3"></script>
 </body>
 </html>
