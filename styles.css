@@ -11,12 +11,13 @@
   --alive: #f2f2f2;
   --display: "Switzer", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --sans: "General Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --sticky-logo-size: 2.5rem;
-  --sticky-logo-gap: 2.5rem;
+  --sticky-logo-size: 2.25rem;
+  --sticky-logo-gap: 1.1rem;
   --sticky-pin-top: calc(var(--sticky-logo-gap) + var(--sticky-logo-size) + var(--sticky-logo-gap));
   --lock-gap: 54px;
   --page-pad-x: 6vw;
   --content-well: 84rem;
+  --header-h: calc(var(--sticky-logo-gap) * 2 + var(--sticky-logo-size));
   color-scheme: dark;
 }
 
@@ -53,18 +54,28 @@ body {
   z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: var(--sticky-logo-gap) var(--page-pad-x) var(--sticky-logo-gap);
+  justify-content: space-between;
+  gap: 1rem;
+  padding: var(--sticky-logo-gap) max(var(--page-pad-x), calc((100% - var(--content-well)) / 2 + var(--page-pad-x)));
   padding-top: calc(var(--sticky-logo-gap) + env(safe-area-inset-top, 0px));
   background: #000;
   border: 0;
+  border-bottom: 1px solid transparent;
   overflow: hidden;
+  transition: border-color 300ms ease;
 }
 
-.wordmark img {
-  width: var(--sticky-logo-size);
-  height: var(--sticky-logo-size);
-  object-fit: contain;
+.wordmark.is-docked {
+  border-bottom-color: var(--line);
+}
+
+/* The brand docks into the header once the 3D logo scrolls past it. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ink);
+  text-decoration: none;
   opacity: 0;
   transform: translateY(calc(100% + var(--sticky-logo-gap)));
   transition:
@@ -72,20 +83,83 @@ body {
     opacity 420ms ease;
 }
 
-.wordmark.is-docked img {
+.wordmark.is-docked .brand {
   opacity: 1;
   transform: translateY(0);
 }
 
+.brand img {
+  width: var(--sticky-logo-size);
+  height: var(--sticky-logo-size);
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.btn-sm {
+  padding: 0.6rem 1.05rem;
+  font-size: 0.92rem;
+}
+
 .hero {
-  min-height: auto;
+  min-height: calc(100svh - var(--header-h));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem var(--page-pad-x) 1.5rem;
-  text-align: center;
+  padding: 2rem var(--page-pad-x) 5rem;
+  text-align: left;
   overflow-x: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: calc(var(--content-well) - 2 * var(--page-pad-x));
+}
+
+.hero .eyebrow {
+  margin-bottom: 1.4rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5.4vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.hero .lede {
+  max-width: 34rem;
+  margin-top: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2.5rem 0 0;
+}
+
+.btn-ghost:hover {
+  border-color: #555;
+}
+
+.hero-inner .cell-mark {
+  justify-self: end;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.hero-inner .hero-logo-cubes {
+  max-height: min(30rem, 62vh);
 }
 
 .cell-mark {
@@ -646,7 +720,12 @@ main {
 #target,
 #market-size,
 #claims {
-  padding-top: 14.25rem;
+  padding-top: 9rem;
+}
+
+.fig-intro {
+  max-width: 42rem;
+  margin: -1.5rem 0 3.5rem;
 }
 
 #market-size > .steps:first-child,
@@ -1261,13 +1340,13 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  min-height: 100svh;
+  min-height: 0;
   box-sizing: border-box;
   max-width: var(--content-well);
   margin-inline: auto;
   text-align: left;
-  padding-top: 14.25rem;
-  padding-bottom: 5.5rem;
+  padding-top: 9rem;
+  padding-bottom: 8rem;
 }
 
 .cta .intro-invite {
@@ -1580,7 +1659,7 @@ footer p {
   }
 
   .intro.cta {
-    min-height: 100svh;
+    min-height: 0;
     padding: 3.75rem var(--page-pad-x) 4.5rem;
   }
 
@@ -1628,7 +1707,7 @@ footer p {
     print-color-adjust: exact;
   }
 
-  .wordmark img {
+  .wordmark .brand {
     opacity: 1;
     transform: none;
   }
@@ -1659,6 +1738,7 @@ body.grid-anim-off .stat-grid,
 body.grid-anim-off .grid-veil,
 body.grid-anim-off .pin-spacer,
 body.grid-anim-off .grid-runway,
+body.grid-anim-off .lock-hold,
 body.grid-anim-off .story-freeze,
 html.grid-anim-off .grid-sticky,
 html.grid-anim-off .stat-grid,
@@ -1865,5 +1945,95 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
 
   .road-mark {
     top: 0.1rem;
+  }
+}
+
+/* Footer */
+.site-footer {
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: calc(2.5rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-right: auto;
+  color: var(--ink);
+}
+
+.footer-brand img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.site-footer a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.15s ease;
+}
+
+.site-footer a:hover {
+  border-bottom-color: var(--ink);
+}
+
+/* Phones: stack the hero, mark on top. */
+@media (max-width: 860px) {
+  .hero {
+    min-height: 0;
+    padding: 1.5rem var(--page-pad-x) 3.5rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hero-inner .cell-mark {
+    order: -1;
+    justify-self: center;
+    width: min(14.5rem, 62vw);
+  }
+
+  .hero-inner .hero-logo-cubes {
+    max-height: min(14.5rem, 30vh);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 10.5vw, 3rem);
+  }
+
+  .hero-actions .btn {
+    min-height: 2.85rem;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .pitch-block + .pitch-block,
+  #target,
+  #market-size,
+  #claims {
+    padding-top: 4.5rem;
+  }
+
+  .fig-intro {
+    margin: -0.75rem 0 2.25rem;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    margin-right: 0;
+    margin-bottom: 0.4rem;
   }
 }

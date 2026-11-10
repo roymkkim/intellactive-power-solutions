@@ -4,51 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="dark" />
-  <title>IntellActive Power Solutions — The brain inside battery storage</title>
+  <title>IntellActive Power Solutions — A complete BMS on every cell</title>
   <meta name="description" content="Cell-level BMS for a $44B BESS market still running 10-year-old pack monitors. Isolate before thermal runaway, at ≤$25 a cell versus $50 mission-critical." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://intellactive-power-solutions.vercel.app/" />
+  <meta property="og:title" content="IntellActive Power Solutions — A complete BMS on every cell" />
+  <meta property="og:description" content="Cell-level battery management: stop thermal runaway before it starts, extend battery life, and integrate any cell — at less than half the cost of today’s mission-critical BMS." />
+  <meta property="og:image" content="https://intellactive-power-solutions.vercel.app/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IntellActive Power Solutions — A complete BMS on every cell" />
+  <meta name="twitter:image" content="https://intellactive-power-solutions.vercel.app/assets/og-image.png" />
   <link rel="icon" href="assets/favicon.svg?v=mark-1" type="image/svg+xml" />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=pitch-51" />
+  <link rel="stylesheet" href="styles.css?v=pitch-52" />
 </head>
 <!-- remove grid-anim-off to restore -->
 <body class="grid-anim-off">
-  <header class="wordmark">
-    <img src="assets/intellactive-logo.svg" alt="IntellActive Power Solutions" width="40" height="40" />
+  <header class="wordmark site-header">
+    <a class="brand" href="#top" aria-label="IntellActive Power Solutions — back to top">
+      <img src="assets/intellactive-logo.svg" alt="" width="40" height="40" />
+      <span class="brand-name">IntellActive</span>
+    </a>
+    <a class="btn btn-primary btn-sm" href="mailto:hello@intellactive.com?subject=Briefing%20request">Request a brief</a>
   </header>
 
   <main>
-    <section class="hero">
-      <figure class="cell-mark" aria-hidden="true">
-        <div class="hero-logo-cubes" data-hero-variant="logo">
-          <div class="cell-hull" data-hero-logo></div>
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">IntellActive Power Solutions</p>
+          <h1>A complete BMS<br />on every cell.</h1>
+          <p class="lede">
+            Packs can stop a fire before it starts, last longer, take a new
+            battery without a redesign, and reject forged commands — at less
+            than half the cost of today’s mission-critical BMS.
+          </p>
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="mailto:hello@intellactive.com?subject=Briefing%20request">Request a brief</a>
+            <a class="btn btn-ghost" href="#solution">See the four gaps</a>
+          </p>
         </div>
-        <div class="hero-brain-cubes" data-hero-variant="brain">
-          <div class="cell-hull" data-hero-cylinder></div>
-        </div>
-      </figure>
+        <figure class="cell-mark" aria-hidden="true">
+          <div class="hero-logo-cubes" data-hero-variant="logo">
+            <div class="cell-hull" data-hero-logo></div>
+          </div>
+          <div class="hero-brain-cubes" data-hero-variant="brain">
+            <div class="cell-hull" data-hero-cylinder></div>
+          </div>
+        </figure>
+      </div>
     </section>
 
     <section class="pitch">
-      <article class="block pitch-block" id="one-sentence">
-        <p class="eyebrow">Intellactive Power Solutions</p>
-        <h2>A complete BMS<br />on every cell.</h2>
-        <p class="section-lede">
-          A BMS on every battery cell. Packs can stop a fire before it starts, last
-          longer, take a new battery without a redesign, and reject forged commands —
-          at less than half the cost of today’s mission-critical BMS.
-        </p>
-        <p class="narrative">
-          Nearly every system still uses a centralized pack or module BMS — the
-          stack-monitor architecture the founders introduced more than 10 years ago.
-        </p>
-      </article>
-
       <article class="block pitch-block fig-block" id="solution">
         <p class="eyebrow">Four challenges</p>
         <h2 class="fig-kicker">Ten years later, four gaps remain. <span>Pack- and module-level systems still leave these open. What we will prove with SwRI and NuEnergy.</span></h2>
+        <p class="section-lede fig-intro">
+          Nearly every system still uses a centralized pack or module BMS — the
+          stack-monitor architecture the founders introduced more than 10 years ago.
+        </p>
         <ol class="fig-row fig-row-4">
           <li>
             <div class="dotmark mark-prevent" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -163,7 +182,7 @@
     <section class="pitch">
       <article class="block pitch-block fig-block" id="market-size">
         <p class="eyebrow">Market</p>
-        <h2 class="fig-kicker">The market is already this size. <span>Storage, BMS, and the cells in those systems.</span></h2>
+        <h2 class="fig-kicker">A rapidly growing market. <span>From energy storage to battery intelligence.</span></h2>
         <ol class="fig-row fig-row-3">
           <li>
             <h3>$44B → $110B</h3>
@@ -193,14 +212,19 @@
         Co-founder and CTO Robert Milliken. DOE Phase I complete. Phase II underway.
       </p>
       <p class="intro-actions">
-        <a class="btn btn-primary" href="mailto:hello@intellactive.com">Request a brief</a>
+        <a class="btn btn-primary" href="mailto:hello@intellactive.com?subject=Briefing%20request">Request a brief</a>
       </p>
     </section>
   </main>
 
-  <footer>
-    <p>IntellActive Power Solutions</p>
+  <footer class="site-footer">
+    <p class="footer-brand">
+      <img src="assets/intellactive-logo.svg" alt="" width="24" height="24" />
+      IntellActive Power Solutions
+    </p>
     <p>San Antonio, Texas</p>
+    <p><a href="mailto:hello@intellactive.com">hello@intellactive.com</a></p>
+    <p class="footer-legal">© 2026 IntellActive Power Solutions</p>
   </footer>
 
   <script src="https://unpkg.com/three@0.160.1/build/three.min.js"></script>
