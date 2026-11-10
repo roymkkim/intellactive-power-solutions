@@ -1831,15 +1831,39 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
 }
 
 @media (max-width: 860px) {
+  /* On phones the track runs down the left side. */
   .roadmap li,
   .roadmap li + li,
+  .roadmap li:nth-child(even),
   .roadmap li:nth-child(n + 3) {
-    padding: 3rem 0 0;
+    padding: 0 0 0 2.5rem;
     margin-top: 0;
     border: 0;
   }
 
   .roadmap li:nth-child(n + 2) {
     margin-top: 2.75rem;
+  }
+
+  .roadmap li::before {
+    top: 1.35rem;
+    bottom: -2.75rem;
+    left: calc(0.5rem - 0.5px);
+    right: auto;
+    border-top: 0;
+    border-left: 1px dashed #3a3a3a;
+  }
+
+  .roadmap li.is-now::before {
+    border-top: 0;
+    border-left: 1px solid var(--signal);
+  }
+
+  .roadmap li:last-child::before {
+    display: none;
+  }
+
+  .road-mark {
+    top: 0.1rem;
   }
 }
