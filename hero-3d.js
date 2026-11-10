@@ -503,7 +503,8 @@
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000);
 
-    const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 400);
+    // A narrow lens reads as flat head-on; depth shows when dragged.
+    const camera = new THREE.PerspectiveCamera(options.fov || 32, 1, 0.1, 400);
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
       alpha: false,
@@ -829,6 +830,7 @@
         fitPad: 1.22,
         objectScale: 1.214,
         canvasBleed: 1,
+        fov: 2.5,
         ampAt: logoCellAmp,
         phaseClock: true,
       });
