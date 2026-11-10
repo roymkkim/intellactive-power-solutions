@@ -16,7 +16,7 @@
   --sticky-pin-top: calc(var(--sticky-logo-gap) + var(--sticky-logo-size) + var(--sticky-logo-gap));
   --lock-gap: 54px;
   --page-pad-x: 6vw;
-  --content-well: 70rem;
+  --content-well: 84rem;
   color-scheme: dark;
 }
 
@@ -781,20 +781,12 @@ main {
 }
 
 .fig-row p.road-step {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
   margin: 0 0 0.9rem;
   font-family: var(--display);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--muted);
-}
-
-.road-step span {
-  color: var(--ink);
 }
 
 .is-now .road-step {
