@@ -1975,11 +1975,40 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
   white-space: nowrap;
 }
 
-.stat-arrow {
-  margin: 0 0.16em;
-  font-family: "Inter", var(--display);
-  font-weight: 300;
+.stat-mult {
+  display: inline-block;
+  margin-left: 0.35em;
+  font-size: 0.42em;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--signal);
+  vertical-align: 0.95em;
+}
+
+.fig-row p.stat-from {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
   color: var(--muted);
+}
+
+/* Growth bar: grey = today, orange = growth (each dot a tenth of the projection). */
+.stat-bar {
+  --p: 0.95rem;
+  display: flex;
+  margin: 1.4rem 0 1.25rem;
+  line-height: 0;
+}
+
+.stat-bar i {
+  display: block;
+  width: calc(var(--n) * var(--p));
+  height: var(--p);
+  background: radial-gradient(circle, #5f5f5f calc(var(--p) * 0.22), transparent calc(var(--p) * 0.22 + 0.6px))
+    0 0 / var(--p) var(--p) repeat-x;
+}
+
+.stat-bar .sb-growth {
+  background-image: radial-gradient(circle, var(--signal) calc(var(--p) * 0.22), transparent calc(var(--p) * 0.22 + 0.6px));
 }
 
 .fig-row p.stat-source {
