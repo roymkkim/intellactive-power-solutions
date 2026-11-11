@@ -957,7 +957,7 @@ main {
 
   8%,
   88% {
-    background: var(--signal);
+    background: #c44;
   }
 
   94%,
@@ -1478,7 +1478,7 @@ footer p {
   }
 
   .mark-prevent i:nth-child(5) {
-    background: var(--signal);
+    background: #c44;
   }
 
   .mark-prevent i:nth-child(4),
