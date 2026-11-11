@@ -2123,6 +2123,11 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
   }
 }
 
+/* The company name, wherever it appears in running text, is brand orange. */
+.brand-word {
+  color: var(--signal);
+}
+
 /* Footer */
 .site-footer {
   align-items: center;
