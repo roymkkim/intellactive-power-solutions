@@ -2112,14 +2112,16 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
   }
 }
 
-/* Second heading line under the Opportunity heading: same type, tighter gap */
+/* Second heading block under the Opportunity heading: same type, its own tier. */
 .fig-kicker.fig-title {
-  margin-top: -1.6rem;
+  margin-top: -0.25rem;
+  margin-bottom: 5.5rem;
 }
 
 @media (max-width: 860px) {
   .fig-kicker.fig-title {
-    margin-top: -0.9rem;
+    margin-top: 0;
+    margin-bottom: 3.25rem;
   }
 }
 
