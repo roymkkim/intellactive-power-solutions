@@ -1,0 +1,142 @@
+/*
+  Preview: Relectrify-inspired type and vertical rhythm.
+  Loaded after styles.css on the preview-relectrify-style branch only.
+  - Headings: light slab serif (Bespoke Slab 300), smaller and calmer.
+  - Body: Switzer, 16-18px, muted.
+  - Section labels: small pill tags with a dot.
+  - Even 64px section padding with hairline dividers; wide layout.
+*/
+
+:root {
+  --serif: "Bespoke Slab", "Roboto Slab", Georgia, serif;
+  --page-pad-x: 3.5rem;
+  --content-well: 112rem;
+  --section-pad: 4rem;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --page-pad-x: 1.25rem;
+    --section-pad: 3.5rem;
+  }
+}
+
+/* Headings ---------------------------------------------------------- */
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.75rem, 6vw, 5.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.fig-kicker,
+.intro h2,
+.cta h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 2.35vw, 2.15rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 52rem;
+}
+
+.fig-kicker {
+  margin: 1.5rem 0 3rem;
+}
+
+.fig-kicker.fig-title {
+  margin-top: 0;
+  margin-bottom: 3.5rem;
+}
+
+.fig-row h3,
+.roadmap h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.005em;
+}
+
+/* Market figures in the light slab, like their stat callouts */
+.stat-row h3.stat {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  letter-spacing: -0.03em;
+}
+
+.stat-unit {
+  font-size: 0.8em;
+}
+
+/* Body ------------------------------------------------------------- */
+
+.hero .lede,
+.fig-row p,
+.cta p,
+.intro p {
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.hero .lede {
+  font-size: 1.15rem;
+  max-width: 36rem;
+}
+
+/* Section labels as pill tags --------------------------------------- */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.35rem 0.8rem 0.35rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+.hero .eyebrow {
+  margin-bottom: 1.75rem;
+}
+
+/* Vertical rhythm: even padding, hairline dividers ------------------ */
+
+.pitch-block + .pitch-block,
+#solution,
+#target,
+#market-size,
+#claims,
+.intro.cta {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+  border-top: 1px solid var(--line);
+}
+
+#solution {
+  padding-top: var(--section-pad);
+}
+
+.hero {
+  padding-bottom: 4rem;
+}
+
+.cta h2 {
+  margin-top: 1.5rem;
+}
