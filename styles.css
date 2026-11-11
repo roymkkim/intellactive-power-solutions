@@ -2112,21 +2112,14 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
   }
 }
 
-/* Title line under the Opportunity heading */
-.fig-title {
-  max-width: 52rem;
-  margin: -1rem 0 3.5rem;
-  font-family: var(--display);
-  font-size: clamp(1.4rem, 2.3vw, 2.1rem);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+/* Second heading line under the Opportunity heading: same type, tighter gap */
+.fig-kicker.fig-title {
+  margin-top: -1.6rem;
 }
 
 @media (max-width: 860px) {
-  .fig-title {
-    margin: -0.5rem 0 2.25rem;
+  .fig-kicker.fig-title {
+    margin-top: -0.9rem;
   }
 }
 
