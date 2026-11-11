@@ -2012,7 +2012,7 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
 /* Challenge illustrations: larger on desktop and tablet. */
 @media (min-width: 861px) {
   #solution .dotmark {
-    --dot-cell: 0.75rem;
+    --dot-cell: 0.675rem;
     --dot-gap: 1.1rem;
     margin-bottom: 2rem;
   }
@@ -2126,6 +2126,13 @@ html.grid-anim-off .pitch > .pitch-block:first-child {
 /* The company name, wherever it appears in running text, is brand orange. */
 .brand-word {
   color: var(--signal);
+}
+
+/* Challenge dots 10% smaller on tablet and phone too (spacing unchanged). */
+@media (max-width: 860px) {
+  #solution .dotmark {
+    --dot-cell: 0.4126rem;
+  }
 }
 
 /* Footer */
