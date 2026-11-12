@@ -11,7 +11,8 @@
   /* Headings: Erode Medium, a sharp, angular modern serif */
   --serif: "Erode", Georgia, serif;
   --page-pad-x: 3.5rem;
-  --content-well: 112rem;
+  /* Content is capped at 75rem (1200px) and centered */
+  --content-well: calc(75rem + 2 * var(--page-pad-x));
   --section-pad: 4rem;
 }
 
@@ -319,4 +320,9 @@ body {
   .hero-actions {
     flex-wrap: wrap;
   }
+}
+
+/* The hero logo is static, so it shouldn't capture touches or scrolling */
+.hero-inner .cell-hull {
+  touch-action: auto;
 }

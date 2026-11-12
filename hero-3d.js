@@ -514,8 +514,11 @@
     });
     renderer.setClearColor(0x000000, clear ? 0 : 1);
     renderer.domElement.setAttribute("aria-hidden", "true");
-    renderer.domElement.style.touchAction = "none";
-    renderer.domElement.style.cursor = "grab";
+    // The logo can be locked to its head-on view (options.interactive === false).
+    const interactive = options.interactive !== false;
+    renderer.domElement.style.touchAction = interactive ? "none" : "auto";
+    renderer.domElement.style.cursor = interactive ? "grab" : "default";
+    if (!interactive) renderer.domElement.style.pointerEvents = "none";
     mount.appendChild(renderer.domElement);
 
     const group = new THREE.Group();
@@ -770,10 +773,12 @@
       }
     };
 
-    renderer.domElement.addEventListener("pointerdown", onPointerDown);
-    renderer.domElement.addEventListener("pointermove", onPointerMove);
-    renderer.domElement.addEventListener("pointerup", onPointerUp);
-    renderer.domElement.addEventListener("pointercancel", onPointerUp);
+    if (interactive) {
+      renderer.domElement.addEventListener("pointerdown", onPointerDown);
+      renderer.domElement.addEventListener("pointermove", onPointerMove);
+      renderer.domElement.addEventListener("pointerup", onPointerUp);
+      renderer.domElement.addEventListener("pointercancel", onPointerUp);
+    }
 
     const start = () => {
       build();
@@ -839,6 +844,7 @@
         objectScale: 1.214,
         canvasBleed: 1.4,
         transparent: true,
+        interactive: false,
         fov: 2.5,
         ampAt: logoCellAmp,
         phaseClock: true,
