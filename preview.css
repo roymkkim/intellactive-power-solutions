@@ -332,3 +332,12 @@ body {
   box-shadow: 0 0 0 100vmax var(--band);
   clip-path: inset(0 -100vmax);
 }
+
+/* Opportunity: the gap between the two headings matches the label-to-heading gap */
+#solution .fig-kicker:has(+ .fig-title) {
+  margin-bottom: 1.875rem;
+}
+
+#solution .fig-kicker.fig-title {
+  margin-top: 0;
+}
