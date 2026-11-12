@@ -1,13 +1,13 @@
 /*
-  Preview: Relectrify-inspired type and vertical rhythm.
-  Loaded after styles.css on the preview-relectrify-style branch only.
-  - Headings: light slab serif (Bespoke Slab 300), smaller and calmer.
-  - Body: Switzer, 16-18px, muted.
-  - Section labels: small pill tags with a dot.
-  - Even 64px section padding with hairline dividers; wide layout.
+  Relectrify-inspired type and vertical rhythm, layered over styles.css.
+  - Headings: Erode Medium. Everything else: Switzer.
+  - Section labels: orange square marker and plain text.
+  - Even section padding, near-black base with alternating bands.
 */
 
 :root {
+  /* Two-font system: Erode for headings, Switzer for everything else */
+  --sans: var(--display);
   /* Headings: Erode Medium, a sharp, angular modern serif */
   --serif: "Erode", Georgia, serif;
   --page-pad-x: 3.5rem;
