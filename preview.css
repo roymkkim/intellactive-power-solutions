@@ -326,3 +326,9 @@ body {
 .hero-inner .cell-hull {
   touch-action: auto;
 }
+
+/* Closing section: background band runs full width; content stays centered */
+.intro.cta {
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
+}
