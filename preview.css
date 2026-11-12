@@ -8,7 +8,7 @@
 */
 
 :root {
-  /* Headings: Aleo Light, a soft humanist slab */
+  /* Headings: Aleo Medium, a soft humanist slab */
   --serif: "Aleo", Georgia, serif;
   --page-pad-x: 3.5rem;
   --content-well: 112rem;
@@ -26,7 +26,7 @@
 
 .hero h1 {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(2.75rem, 6vw, 5.6rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
@@ -36,7 +36,7 @@
 .intro h2,
 .cta h2 {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(1.6rem, 2.35vw, 2.15rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
