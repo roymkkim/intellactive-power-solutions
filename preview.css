@@ -92,10 +92,11 @@
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.55em;
   margin: 0;
   padding: 0;
   border: 0;
+  line-height: 1;
   font-family: var(--display);
   font-size: 0.9rem;
   font-weight: 400;
@@ -107,8 +108,11 @@
 /* Square marker, echoing the orange square in the logo */
 .eyebrow::before {
   content: "";
-  width: 0.45rem;
-  height: 0.45rem;
+  flex: none;
+  /* matches the cap height of the label text */
+  width: 0.68em;
+  height: 0.68em;
+  transform: translateY(-0.04em);
   border-radius: 0;
   background: var(--signal);
 }
