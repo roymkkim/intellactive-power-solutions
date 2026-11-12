@@ -214,3 +214,10 @@ body {
 .intro.cta {
   border-top: 0;
 }
+
+/* Header logo is always visible (no dock-in on scroll) */
+.wordmark .brand {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
