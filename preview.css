@@ -8,7 +8,8 @@
 */
 
 :root {
-  --serif: "Bespoke Slab", "Roboto Slab", Georgia, serif;
+  /* Headings use the site sans (General Sans) */
+  --serif: var(--display);
   --page-pad-x: 3.5rem;
   --content-well: 112rem;
   --section-pad: 4rem;
@@ -25,7 +26,7 @@
 
 .hero h1 {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(2.75rem, 6vw, 5.6rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
@@ -35,7 +36,7 @@
 .intro h2,
 .cta h2 {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(1.6rem, 2.35vw, 2.15rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -62,7 +63,7 @@
 /* Market figures in the light slab, like their stat callouts */
 .stat-row h3.stat {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(2rem, 3vw, 2.75rem);
   letter-spacing: -0.03em;
 }
