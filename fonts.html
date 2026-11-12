@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Heading font comparison — IntellActive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500&f[]=erode@400,500&f[]=gambetta@400,500&f[]=boska@400,500&f[]=switzer@400,500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink: #f2f2f2; --muted: #8a8a8a; --line: #222; --signal: #e35a1a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #000; color: var(--ink); font-family: Switzer, Helvetica, Arial, sans-serif; }
+    header { padding: 2.5rem 3.5rem 1rem; color: var(--muted); font-size: 0.95rem; }
+    section { padding: 3.5rem 3.5rem 4rem; border-top: 1px solid var(--line); }
+    .tag { display: inline-flex; align-items: center; gap: 0.55em; font-size: 0.9rem; line-height: 1; margin-bottom: 1.5rem; }
+    .tag::before { content: ""; width: 0.68em; height: 0.68em; background: var(--signal); transform: translateY(-0.04em); }
+    .tag b { font-weight: 500; }
+    .tag span { color: var(--muted); margin-left: 0.4rem; }
+    h1 { margin: 0 0 1.75rem; font-size: clamp(2.6rem, 5.6vw, 5.2rem); line-height: 1.06; letter-spacing: -0.03em; }
+    h2 { margin: 0; max-width: 52rem; font-size: clamp(1.5rem, 2.3vw, 2.1rem); line-height: 1.22; letter-spacing: -0.015em; }
+    h2 span { color: var(--muted); }
+    .brand { color: var(--signal); }
+    p { max-width: 36rem; margin: 1.5rem 0 0; color: var(--muted); font-size: 1.05rem; line-height: 1.5; }
+    @media (max-width: 760px) { header, section { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+</head>
+<body>
+  <header>Sharp-edged, modern serif candidates for IntellActive headings. Body text stays Switzer in every option.</header>
+
+  <section style="--f: 'Zodiak'; --w: 500">
+    <p class="tag"><b>Zodiak Medium</b><span>Fontshare · crisp wedge serifs, contemporary · recommended</span></p>
+    <h1 style="font-family: var(--f); font-weight: var(--w)">A complete BMS<br />on every cell.</h1>
+    <h2 style="font-family: var(--f); font-weight: var(--w)">We set the standard a decade ago. <span>But critical challenges remain beyond the reach of today’s pack- and module-level BMS.</span></h2>
+    <p><span class="brand">IntellActive</span> BMS can stop a fire before it starts, make battery life last longer, and adapt to any battery application without redesign.</p>
+  </section>
+
+  <section style="--f: 'Erode'; --w: 500">
+    <p class="tag"><b>Erode Medium</b><span>Fontshare · sharp, angular, technical</span></p>
+    <h1 style="font-family: var(--f); font-weight: var(--w)">A complete BMS<br />on every cell.</h1>
+    <h2 style="font-family: var(--f); font-weight: var(--w)">We set the standard a decade ago. <span>But critical challenges remain beyond the reach of today’s pack- and module-level BMS.</span></h2>
+    <p><span class="brand">IntellActive</span> BMS can stop a fire before it starts, make battery life last longer, and adapt to any battery application without redesign.</p>
+  </section>
+
+  <section style="--f: 'Gambetta'; --w: 500">
+    <p class="tag"><b>Gambetta Medium</b><span>Fontshare · triangular serifs, high contrast</span></p>
+    <h1 style="font-family: var(--f); font-weight: var(--w)">A complete BMS<br />on every cell.</h1>
+    <h2 style="font-family: var(--f); font-weight: var(--w)">We set the standard a decade ago. <span>But critical challenges remain beyond the reach of today’s pack- and module-level BMS.</span></h2>
+    <p><span class="brand">IntellActive</span> BMS can stop a fire before it starts, make battery life last longer, and adapt to any battery application without redesign.</p>
+  </section>
+
+  <section style="--f: 'Boska'; --w: 500">
+    <p class="tag"><b>Boska Medium</b><span>Fontshare · razor-sharp, luxury edge</span></p>
+    <h1 style="font-family: var(--f); font-weight: var(--w)">A complete BMS<br />on every cell.</h1>
+    <h2 style="font-family: var(--f); font-weight: var(--w)">We set the standard a decade ago. <span>But critical challenges remain beyond the reach of today’s pack- and module-level BMS.</span></h2>
+    <p><span class="brand">IntellActive</span> BMS can stop a fire before it starts, make battery life last longer, and adapt to any battery application without redesign.</p>
+  </section>
+
+  <section style="--f: 'IBM Plex Serif'; --w: 400">
+    <p class="tag"><b>IBM Plex Serif</b><span>Google · engineered, industrial (less sharp)</span></p>
+    <h1 style="font-family: var(--f); font-weight: var(--w)">A complete BMS<br />on every cell.</h1>
+    <h2 style="font-family: var(--f); font-weight: var(--w)">We set the standard a decade ago. <span>But critical challenges remain beyond the reach of today’s pack- and module-level BMS.</span></h2>
+    <p><span class="brand">IntellActive</span> BMS can stop a fire before it starts, make battery life last longer, and adapt to any battery application without redesign.</p>
+  </section>
+
+</body>
+</html>
