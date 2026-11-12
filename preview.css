@@ -232,3 +232,66 @@ body {
 .cta h2 {
   line-height: 1.15;
 }
+
+/* Challenge graphics: on phones (and with reduced motion) show each
+   graphic's finished state instead of a looping animation, since a single
+   card on screen can land on an empty frame. */
+@media (max-width: 860px), (prefers-reduced-motion: reduce) {
+  #solution .dotmark i,
+  #solution .dotmark b {
+    animation: none !important;
+  }
+
+  #solution .mark-prevent i {
+    background: var(--alive);
+  }
+
+  #solution .mark-prevent i:nth-child(4),
+  #solution .mark-prevent i:nth-child(9),
+  #solution .mark-prevent i:nth-child(10) {
+    background: var(--dead);
+  }
+
+  #solution .mark-prevent i:nth-child(5) {
+    background: #c44;
+  }
+
+  #solution .mark-life i {
+    background: var(--life-green, #3d9b5c);
+  }
+
+  #solution .mark-play i {
+    background: var(--signal);
+    border-radius: 0;
+  }
+
+  #solution .mark-defend i {
+    background: var(--alive);
+  }
+
+  #solution .mark-defend i:nth-child(13),
+  #solution .mark-defend i:nth-child(17),
+  #solution .mark-defend i:nth-child(19),
+  #solution .mark-defend i:nth-child(23) {
+    background: var(--dead);
+  }
+
+  #solution .mark-defend i:nth-child(18) {
+    background: #c44;
+  }
+}
+
+/* Phones: larger dots and clear separation between the four cards */
+@media (max-width: 860px) {
+  #solution .dotmark {
+    --dot-cell: 0.55rem;
+    --dot-gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  #solution .fig-row > li + li {
+    margin-top: 3.25rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
