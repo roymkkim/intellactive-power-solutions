@@ -204,3 +204,13 @@ body {
   opacity: 1 !important;
   transform: none !important;
 }
+
+/* Sections are separated by tone, so no horizontal divider lines */
+.pitch-block + .pitch-block,
+#solution,
+#target,
+#market-size,
+#claims,
+.intro.cta {
+  border-top: 0;
+}
