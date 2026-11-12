@@ -8,8 +8,8 @@
 */
 
 :root {
-  /* Headings: Aleo Medium, a soft humanist slab */
-  --serif: "Aleo", Georgia, serif;
+  /* Headings: Erode Medium, a sharp, angular modern serif */
+  --serif: "Erode", Georgia, serif;
   --page-pad-x: 3.5rem;
   --content-well: 112rem;
   --section-pad: 4rem;
