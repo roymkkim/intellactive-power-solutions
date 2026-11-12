@@ -186,71 +186,10 @@ body {
   background: var(--bg);
 }
 
-/* How it works diagram ---------------------------------------------- */
-.arch {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.arch-panel {
-  margin: 0;
-  padding: 2rem 2rem 1.75rem;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.015);
-}
-
-.arch-panel.is-ours {
-  border-color: rgba(227, 90, 26, 0.35);
-}
-
-.arch-svg {
-  display: block;
-  width: 100%;
-  max-width: 26rem;
-  height: auto;
-  margin: 0 auto 1.75rem;
-}
-
-.arch-label {
-  font-family: var(--display);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  fill: #cfcfcf;
-}
-
-.arch-panel figcaption {
-  max-width: 30rem;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
-.arch-title {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-family: var(--display);
-  font-weight: 500;
-  color: var(--ink);
-}
-
-@media (max-width: 860px) {
-  .arch {
-    grid-template-columns: 1fr;
-  }
-
-  .arch-panel {
-    padding: 1.5rem 1.25rem 1.25rem;
-  }
-}
-
 /* Fade-in on scroll (only when reveal.js is running) ---------------- */
 .reveal-on .pitch-block > .eyebrow,
 .reveal-on .pitch-block > .fig-kicker,
 .reveal-on .fig-row > li,
-.reveal-on .arch-panel,
 .reveal-on .intro.cta > * {
   opacity: 0;
   transform: translateY(14px);

@@ -4,7 +4,7 @@
   if (!("IntersectionObserver" in window)) return;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const targets = document.querySelectorAll(
-    ".pitch-block > .eyebrow, .pitch-block > .fig-kicker, .fig-row > li, .arch-panel, .intro.cta > *"
+    ".pitch-block > .eyebrow, .pitch-block > .fig-kicker, .fig-row > li, .intro.cta > *"
   );
   document.documentElement.classList.add("reveal-on");
   const io = new IntersectionObserver(
