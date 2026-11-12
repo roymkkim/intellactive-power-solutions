@@ -295,3 +295,28 @@ body {
     border-top: 0;
   }
 }
+
+/* Phones: hero buttons side by side */
+@media (max-width: 860px) {
+  .hero-actions {
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Very narrow phones: let them stack rather than squeeze */
+@media (max-width: 340px) {
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+}
