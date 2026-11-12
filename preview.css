@@ -221,3 +221,14 @@ body {
   transform: none;
   transition: none;
 }
+
+/* Tighter display leading for the serif headings */
+.hero h1 {
+  line-height: 1;
+}
+
+.fig-kicker,
+.intro h2,
+.cta h2 {
+  line-height: 1.15;
+}
